@@ -1,0 +1,80 @@
+$primary-color: magenta;
+
+html,
+body,
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+	height: 100vh;
+	width: 100vw;
+	overscroll-behavior-y: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+h1 {
+	text-align: center;
+  margin-bottom: 70px;
+}
+
+button,
+input[type="submit"] {
+	background-color: $primary-color;
+	border: 5px solid lighten($primary-color, 30%);
+	color: white;
+	margin: 0 0.5em;
+	padding: 1em;
+	outline: none;
+	&:hover {
+		background-color: darken($primary-color, 5%);
+	}
+	&:active {
+		background-color: darken($primary-color, 10%);
+	}
+}
+
+input {
+	padding: 1em;
+	&:not([type="submit"]) {
+		display: block;
+		margin: 0.5em;
+	}
+}
+
+form {
+	padding: 0.5em;
+	margin: 1em 0;
+	display: flex;
+	flex-direction: column;
+	label {
+		text-align: center;
+		display: block;
+		margin-bottom: 0.5em;
+	}
+}
+
+.Counter {
+	border: 5px solid lighten($primary-color, 40%);
+	font-weight: 700;
+	margin: 2em auto;
+	padding: 1em;
+	width: 600px;
+}
+
+.count {
+	font-size: 8em;
+	text-align: center;
+  margin-bottom: 30px;
+}
+
+.controls {
+	display: flex;
+	justify-content: center;
+  margin-bottom: 50px;
+}
